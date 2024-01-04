@@ -76,7 +76,7 @@ class EventoController extends Controller
 
       $event->save();
 
-      return redirect('/')->with('msg', 'Evento criado com sucesso!');
+      return EventoController::evento();
  }
 
    //Buscando um registro na base de dados
