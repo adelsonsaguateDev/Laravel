@@ -49,7 +49,7 @@
                 <form action="/events/{{ $evento->id }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button title="Apagar" type="submit" class="btn btn-danger btn-xs"><i class="fa fa-trash">Apagar</i></button>
+                    <button title="Apagar" id="btn_apagar" type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash">Apagar</i></button>
                 </form>
              </div>
           </td>
@@ -108,5 +108,5 @@
 
 
     </div>
- 
+
 @endsection

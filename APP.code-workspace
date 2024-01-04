@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "DUCUMENTOS/PROJECTOS/Laravel"
+		}
+	],
+	"settings": {
+		"vue.codeActions.enabled": false
+	},
+	"extensions": {
+		"recommendations": [
+			"octref.vetur"
+		]
+	}
+}
