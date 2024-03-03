@@ -8,7 +8,14 @@
 
     <h1>Pesquise um evento</h1>
     <form action="/" method="GET">
-    <input type="text"  id="search" name="search" class="form-control" placeholder="Pesquise aqui..." >
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text"  id="search" name="search" class="form-control" placeholder="Pesquise aqui..." >                
+            </div>
+            <div class="">
+                <input class="form-control" style="background-color: white" class="btn btn-warning" type="submit" value="Pesquisar">
+            </div>
+        </div>
     </form>
 </div>
 
