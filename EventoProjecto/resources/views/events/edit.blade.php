@@ -5,6 +5,7 @@
 
 @section('content')
 
+
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1>Editando: {{ $event->titulo}}</h1>
     <form action="/events/update/{{ $event->id }}" method="POST" enctype="multipart/form-data">
@@ -43,18 +44,24 @@
       </div>
       <div class="form-group">
         <label for="title">Adicione itens de infrestrutura:</label>
-        <div class="form-group">
-          <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="items[]" value="Palco"> Palco
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="items[]" value="Comida Gratis"> Comida Gratis
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="items[]" value="Brindes"> Brindes
-        </div>
+
+        @foreach ($event->items as $item)
+
+          <div class="form-group">
+            <input type="checkbox"  {{ $item == "Cadeiras" ? "checked" : ""}}   name="items[]" value="Cadeiras"> Cadeiras
+          </div>
+          <div class="form-group">
+            <input type="checkbox"  {{ $item == "Palco" ? "checked" : ""}} name="items[]" value="Palco"> Palco
+          </div>
+          <div class="form-group">
+            <input type="checkbox" {{ $item == "Comida Gratis" ? "checked" : ""}}  name="items[]" value="Comida Gratis"> Comida Gratis
+          </div>
+          <div class="form-group">
+            <input type="checkbox" {{ $item == "Brindes" ? "checked" : ""}} name="items[]" value="Brindes"> Brindes
+          </div>
+
+        @endforeach
+
        
         
       
